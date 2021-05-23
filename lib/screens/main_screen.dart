@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_travel_concept/screens/blog.dart';
 import 'package:flutter_travel_concept/screens/home.dart';
 import 'package:flutter_travel_concept/widgets/icon_badge.dart';
+import 'package:flutter_travel_concept/screens/aboutus.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -13,12 +15,15 @@ class _MainScreenState extends State<MainScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: PageView(
+
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: List.generate(4, (index) => Home()),
+        children: List.generate(4, (index) =>   Home()
+        ),
       ),
       bottomNavigationBar: BottomAppBar(
         child: Row(
@@ -27,8 +32,8 @@ class _MainScreenState extends State<MainScreen> {
           children: <Widget>[
             SizedBox(width: 7.0),
             barIcon(icon: Icons.home, page: 0),
-            barIcon(icon: Icons.favorite, page: 1),
-            barIcon(icon: Icons.mode_comment, page: 2, badge: true),
+            barIcon(icon: Icons.collections_bookmark, page: 1),
+            barIcon(icon: Icons.card_travel, page: 2, ),
             barIcon(icon: Icons.person, page: 3),
             SizedBox(width: 7.0),
           ],
