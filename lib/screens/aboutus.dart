@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:flutter_travel_concept/screens/details.dart';
 
 class ProfileApp extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+    debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.black12,
         body: SafeArea(
@@ -16,9 +20,7 @@ class ProfileApp extends StatelessWidget {
                           gradient: LinearGradient(
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
-                              colors: [Colors.redAccent, Colors.pinkAccent]
-                          )
-                      ),
+                              colors: [Colors.redAccent, Colors.pinkAccent])),
                       child: Container(
                         width: double.infinity,
                         height: 350.0,
@@ -37,7 +39,7 @@ class ProfileApp extends StatelessWidget {
                                 height: 10.0,
                               ),
                               Text(
-                                "Alice James",
+                                "Pink Pedals",
                                 style: TextStyle(
                                   fontSize: 22.0,
                                   color: Colors.white,
@@ -47,86 +49,86 @@ class ProfileApp extends StatelessWidget {
                                 height: 10.0,
                               ),
                               Card(
-                                margin: EdgeInsets.symmetric(horizontal: 20.0,vertical: 5.0),
+                                margin: EdgeInsets.symmetric(
+                                    horizontal: 20.0, vertical: 5.0),
                                 clipBehavior: Clip.antiAlias,
                                 color: Colors.white,
                                 elevation: 5.0,
                                 child: Padding(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 22.0),
+                                  padding: const EdgeInsets.symmetric(
+                                      horizontal: 8.0, vertical: 22.0),
                                   child: Row(
                                     children: <Widget>[
                                       Expanded(
                                         child: Column(
-
                                           children: <Widget>[
-                                            Text(
-                                              "Posts",
-                                              style: TextStyle(
-                                                color: Colors.redAccent,
-                                                fontSize: 22.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5.0,
-                                            ),
-                                            Text(
-                                              "5200",
-                                              style: TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.pinkAccent,
-                                              ),
-                                            )
+                                            IconButton(
+                                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.instagram,
+                                                  size: 30.0,
+                                                ),
+                                                onPressed: () {
+                                                  print("Pressed");
+                                                }),
                                           ],
                                         ),
                                       ),
                                       Expanded(
                                         child: Column(
-
                                           children: <Widget>[
-                                            Text(
-                                              "Followers",
-                                              style: TextStyle(
-                                                color: Colors.redAccent,
-                                                fontSize: 22.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5.0,
-                                            ),
-                                            Text(
-                                              "28.5K",
-                                              style: TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.pinkAccent,
-                                              ),
-                                            )
+                                            IconButton(
+                                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.facebook,
+                                                  size: 30.0,
+                                                ),
+                                                onPressed: () {
+                                                  print("Pressed");
+                                                }),
                                           ],
                                         ),
                                       ),
                                       Expanded(
                                         child: Column(
-
                                           children: <Widget>[
-                                            Text(
-                                              "Follow",
-                                              style: TextStyle(
-                                                color: Colors.redAccent,
-                                                fontSize: 22.0,
-                                                fontWeight: FontWeight.bold,
-                                              ),
-                                            ),
-                                            SizedBox(
-                                              height: 5.0,
-                                            ),
-                                            Text(
-                                              "1300",
-                                              style: TextStyle(
-                                                fontSize: 20.0,
-                                                color: Colors.pinkAccent,
-                                              ),
-                                            )
+                                            IconButton(
+                                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.linkedin,
+                                                  size: 30.0,
+                                                ),
+                                                onPressed: () {
+                                                  print("Pressed");
+                                                }),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Column(
+                                          children: <Widget>[
+                                            IconButton(
+                                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                                icon: FaIcon(
+                                                  FontAwesomeIcons.tripadvisor,
+                                                  size: 30.0,
+                                                ),
+                                                onPressed: () {
+                                                  print("Pressed");
+                                                }),
+                                          ],
+                                        ),
+                                      ),
+                                      Expanded(
+                                        child: Column(
+                                          children: <Widget>[
+                                            IconButton(
+                                                // Use the FaIcon Widget + FontAwesomeIcons class for the IconData
+                                                icon: FaIcon(
+                                                    FontAwesomeIcons.twitter),
+                                                onPressed: () {
+                                                  print("Pressed");
+                                                }),
                                           ],
                                         ),
                                       ),
@@ -137,35 +139,152 @@ class ProfileApp extends StatelessWidget {
                             ],
                           ),
                         ),
-                      )
+                      )),
+                  Container(
+                    padding: EdgeInsets.only(
+                      top: 15.0,
+                      left: 20.0,
+                    ),
+                    height: 50.0,
+                    width: MediaQuery.of(context).size.width,
+                    child: Text(
+                      "Abour Us",
+                      style: TextStyle(
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
                   ),
                   Container(
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 30.0,horizontal: 16.0),
+                    padding: EdgeInsets.all(10.0),
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Text(
-                            "Bio:",
-                            style: TextStyle(
-                                color: Colors.redAccent,
-                                fontStyle: FontStyle.normal,
-                                fontSize: 28.0
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.arrow_drop_down_circle),
+                            title: const Text('Card title 1'),
+                            subtitle: Text(
+                              'Secondary Text',
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)),
                             ),
                           ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                          Text('My name is Alice and I am  a freelance mobile app developper.\n'
-                              'if you need any mobile app for your company then contact me for more informations',
-                            style: TextStyle(
-                              fontSize: 22.0,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.black,
-                              letterSpacing: 2.0,
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)),
                             ),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.start,
+                            children: [
+                              FlatButton(
+                                textColor: const Color(0xFF6200EE),
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                        return Details();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: const Text('ACTION 2'),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10.0),
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.arrow_drop_down_circle),
+                            title: const Text('Card title 1'),
+                            subtitle: Text(
+                              'Secondary Text',
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)),
+                            ),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.start,
+                            children: [
+                              FlatButton(
+                                textColor: const Color(0xFF6200EE),
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                        return Details();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: const Text('ACTION 2'),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Container(
+                    padding: EdgeInsets.all(10.0),
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      child: Column(
+                        children: [
+                          ListTile(
+                            leading: Icon(Icons.arrow_drop_down_circle),
+                            title: const Text('Card title 1'),
+                            subtitle: Text(
+                              'Secondary Text',
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(16.0),
+                            child: Text(
+                              'Greyhound divisively hello coldly wonderfully marginally far upon excluding.',
+                              style: TextStyle(
+                                  color: Colors.black.withOpacity(0.6)),
+                            ),
+                          ),
+                          ButtonBar(
+                            alignment: MainAxisAlignment.start,
+                            children: [
+                              FlatButton(
+                                textColor: const Color(0xFF6200EE),
+                                onPressed: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                        return Details();
+                                      },
+                                    ),
+                                  );
+                                },
+                                child: const Text('ACTION 2'),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -173,35 +292,6 @@ class ProfileApp extends StatelessWidget {
                   ),
                   SizedBox(
                     height: 20.0,
-                  ),
-                  Container(
-                    width: 300.00,
-
-                    child: RaisedButton(
-                        onPressed: (){},
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(80.0)
-                        ),
-                        elevation: 0.0,
-                        padding: EdgeInsets.all(0.0),
-                        child: Ink(
-                          decoration: BoxDecoration(
-                            gradient: LinearGradient(
-                                begin: Alignment.centerRight,
-                                end: Alignment.centerLeft,
-                                colors: [Colors.redAccent,Colors.pinkAccent]
-                            ),
-                            borderRadius: BorderRadius.circular(30.0),
-                          ),
-                          child: Container(
-                            constraints: BoxConstraints(maxWidth: 300.0, minHeight: 50.0),
-                            alignment: Alignment.center,
-                            child: Text("Contact me",
-                              style: TextStyle(color: Colors.white, fontSize: 26.0, fontWeight:FontWeight.w300),
-                            ),
-                          ),
-                        )
-                    ),
                   ),
                 ],
               ),

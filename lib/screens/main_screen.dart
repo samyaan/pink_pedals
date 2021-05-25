@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_travel_concept/screens/blog.dart';
+import 'package:flutter_travel_concept/screens/book.dart';
 import 'package:flutter_travel_concept/screens/home.dart';
 import 'package:flutter_travel_concept/widgets/icon_badge.dart';
 import 'package:flutter_travel_concept/screens/aboutus.dart';
@@ -22,7 +23,7 @@ class _MainScreenState extends State<MainScreen> {
         physics: NeverScrollableScrollPhysics(),
         controller: _pageController,
         onPageChanged: onPageChanged,
-        children: List.generate(4, (index) =>   Home()
+        children: List.generate(4, (index) =>   ProfileApp()
         ),
       ),
       bottomNavigationBar: BottomAppBar(
